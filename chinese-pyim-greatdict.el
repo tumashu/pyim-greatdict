@@ -7,6 +7,7 @@
 ;; Maintainer: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/chinese-pyim-greatdict
 ;; Version: 0.0.1
+;; Package-Requires: ((chinese-pyim "20160514"))
 ;; Keywords: convenience, Chinese, pinyin, input-method, complete
 
 ;;; Commentary:
@@ -84,6 +85,23 @@
 ;;; Code:
 ;; * 代码                                                               :code:
 ;; #+BEGIN_SRC emacs-lisp
+(require 'chinese-pyim)
+
+;;;###autoload
+(defun chinese-pyim-greatdict-enable ()
+  "Add greatdict to chinese-pyim."
+  (interactive)
+  (let* ((file (concat (file-name-directory
+                        (locate-library "chinese-pyim-greatdict.el"))
+                       "pyim-greatdict.pyim.gz")))
+    (when (file-exists-p file)
+      (pyim-extra-dicts-add-dict
+       `(:name "Greatdict-elpa"
+               :file ,file
+               :coding utf-8-unix
+               :dict-type pinyin-dict
+               :elpa t)))))
+
 ;; #+END_SRC
 
 ;; * Footer

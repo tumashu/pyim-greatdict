@@ -1,16 +1,26 @@
 - [chinese-pyim-greatdict README](#chinese-pyim-greatdict-readme)
   - [简介](#简介)
+  - [安装和使用](#安装和使用)
   - [NLP 语料库](#nlp-语料库)
 
-# chinese-pyim-greatdict README<a id="org4573ac7"></a>
+# chinese-pyim-greatdict README<a id="org9736f02"></a>
 
-## 简介<a id="org184c12b"></a>
+## 简介<a id="org13b270b"></a>
 
 Chinese-pyim-greatdict 是一个 chinese-pyim 词库， 由 [WenLiang Xiao ](https://github.com/xiaowl) 同学根据他之前自己使用的一个 NLP 语料库整理而成，这个词库词条比较多，包涵大概330万左右的词条，文件大小大约 80M, 希望可以免去大多数人到处找字典的苦恼。
 
 WenLiang Xiao 同学 [最初](https://github.com/tumashu/chinese-pyim/pull/77) 将这个词库通过百度网盘发布，我个人认为这个词库文件对 Chinese-pyim 很重要，所以为其开启一个项目，并将这个词库命名为：greatdict.
 
-## NLP 语料库<a id="orgffbf264"></a>
+## 安装和使用<a id="org9d89e74"></a>
+
+1.  配置melpa源，参考：<http://melpa.org/#/getting-started>
+2.  M-x package-install RET chinese-pyim-greatdict RET
+3.  在emacs配置文件中（比如: ~/.emacs）添加如下代码：
+
+        (require 'chinese-pyim-greatdict)
+        (chinese-pyim-greatdict-enable)
+
+## NLP 语料库<a id="org692ec1c"></a>
 
 Chinese-pyim-greatdict 使用 NLP 语料库由 [刘邵博](https://github.com/lshb) 同学开发，2014 年发布在 “中国自然语言开源组织”的网站，具体网址为：<http://www.nlpcn.org/resource/25>
 

@@ -12,6 +12,7 @@
 
 ;;; Commentary:
 ;; * chinese-pyim-greatdict README                                        :README:doc:
+
 ;; ** 简介
 ;; Chinese-pyim-greatdict 是一个 chinese-pyim 词库， 由 [[https://github.com/xiaowl][WenLiang Xiao ]] 同学根据他
 ;; 之前自己使用的一个 NLP 语料库整理而成，这个词库词条比较多，包涵大概330万左右的词条，
@@ -19,6 +20,16 @@
 
 ;; WenLiang Xiao 同学 [[https://github.com/tumashu/chinese-pyim/pull/77][最初]] 将这个词库通过百度网盘发布，
 ;; 我个人认为这个词库文件对 Chinese-pyim 很重要，所以为其开启一个项目，并将这个词库命名为：greatdict.
+
+;; ** 安装和使用
+
+;; 1. 配置melpa源，参考：http://melpa.org/#/getting-started
+;; 2. M-x package-install RET chinese-pyim-greatdict RET
+;; 3. 在emacs配置文件中（比如: ~/.emacs）添加如下代码：
+;;    #+BEGIN_EXAMPLE
+;;    (require 'chinese-pyim-greatdict)
+;;    (chinese-pyim-greatdict-enable)
+;;    #+END_EXAMPLE
 
 ;; ** NLP 语料库
 ;; Chinese-pyim-greatdict 使用 NLP 语料库由 [[https://github.com/lshb][刘邵博]] 同学开发，2014 年发布在 “中国自然语言开源组织”

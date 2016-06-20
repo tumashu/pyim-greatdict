@@ -95,7 +95,6 @@
 ;;; Code:
 ;; * 代码                                                               :code:
 ;; #+BEGIN_SRC emacs-lisp
-(require 'chinese-pyim)
 
 ;;;###autoload
 (defun chinese-pyim-greatdict-enable ()

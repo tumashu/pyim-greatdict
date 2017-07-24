@@ -1,36 +1,45 @@
-- [chinese-pyim-greatdict README](#chinese-pyim-greatdict-readme)
-  - [简介](#简介)
-  - [安装和使用](#安装和使用)
-  - [NLP 语料库](#nlp-语料库)
+- [pyim-greatdict README](#org57842d4)
+  - [简介](#orgcf8626b)
+  - [安装和使用](#org0d761c1)
+  - [NLP 语料库](#orgf6603cc)
 
-# chinese-pyim-greatdict README<a id="org9736f02"></a>
 
-## 简介<a id="org13b270b"></a>
+<a id="org57842d4"></a>
 
-Chinese-pyim-greatdict 是一个 chinese-pyim 词库， 由 [WenLiang Xiao ](https://github.com/xiaowl) 同学根据他之前自己使用的一个 NLP 语料库整理而成，这个词库词条比较多，包涵大概330万左右的词条，文件大小大约 80M, 希望可以免去大多数人到处找字典的苦恼。
+# pyim-greatdict README
 
-WenLiang Xiao 同学 [最初](https://github.com/tumashu/chinese-pyim/pull/77) 将这个词库通过百度网盘发布，我个人认为这个词库文件对 Chinese-pyim 很重要，所以为其开启一个项目，并将这个词库命名为：greatdict.
 
-## 安装和使用<a id="org9d89e74"></a>
+<a id="orgcf8626b"></a>
+
+## 简介
+
+pyim-greatdict 是一个 pyim 词库， 由 [WenLiang Xiao ](https://github.com/xiaowl) 同学根据他 之前自己使用的一个 NLP 语料库整理而成，这个词库词条比较多，包涵大概330万左右的词条， 文件大小大约 80M, 希望可以免去大多数人到处找字典的苦恼。
+
+WenLiang Xiao 同学 [最初](https://github.com/tumashu/pyim/pull/77) 将这个词库通过百度网盘发布， 我个人认为这个词库文件对 pyim 很重要，所以为其开启一个项目，并将这个词库命名为：greatdict.
+
+
+<a id="org0d761c1"></a>
+
+## 安装和使用
 
 1.  配置melpa源，参考：<http://melpa.org/#/getting-started>
-2.  M-x package-install RET chinese-pyim-greatdict RET
+2.  M-x package-install RET pyim-greatdict RET
 3.  在emacs配置文件中（比如: ~/.emacs）添加如下代码：
 
-        (require 'chinese-pyim-greatdict)
-        (chinese-pyim-greatdict-enable)
+        (require 'pyim-greatdict)
+        (pyim-greatdict-enable)
 
-## NLP 语料库<a id="org692ec1c"></a>
 
-Chinese-pyim-greatdict 使用 NLP 语料库由 [刘邵博](https://github.com/lshb) 同学开发，2014 年发布在 “中国自然语言开源组织”的网站，具体网址为：<http://www.nlpcn.org/resource/25>
+<a id="orgf6603cc"></a>
+
+## NLP 语料库
+
+pyim-greatdict 使用 NLP 语料库由 [刘邵博](https://github.com/lshb) 同学开发，2014 年发布在 “中国自然语言开源组织” 的网站，具体网址为：<http://www.nlpcn.org/resource/25>
 
 语料库的发布包中包含了以下的信息（其中 email 地址隐藏）：
 
     作者：刘邵博         版本：v1
-    此词典为个人综合多本词典整合的一个大词典，词典共有词汇3669216个词汇。
-    词典结构为：词语\t词性\t词频。
-    词频是用ansj分词对270G新闻语料进行分词统计词频获得。
-    本人感觉需要特别说明的是词典整理过程中存在部分词汇无法确定是什么词性，对词性进行特别标注：nw和comb
+    此词典为个人综合多本词典整合的一个大词典，词典共有词汇3669216个词汇。词典结构为：词语\t词性\t词频。词频是用ansj分词对270G新闻语料进行分词统计词频获得。本人感觉需要特别说明的是词典整理过程中存在部分词汇无法确定是什么词性，对词性进行特别标注：nw和comb
         1、词性nw表示本身不知道是什么词性。
         2、词性comb表示通过ansj的nlp分词之后又被拆成了两个词。
 
@@ -42,8 +51,7 @@ Chinese-pyim-greatdict 使用 NLP 语料库由 [刘邵博](https://github.com/ls
 
         发件人：
         lshb1986@qq.com<???????@qq.com>
-        收件人：
-        我<???????@163.com>
+        收件人：我<???????@163.com>
         时   间：
         2016年06月02日 16:00 (星期四)
 
@@ -59,19 +67,19 @@ Chinese-pyim-greatdict 使用 NLP 语料库由 [刘邵博](https://github.com/ls
 
     你好，刘同学
 
-        我是 emacs拼音输入法： chinese-pyim 的维护者 ，https://github.com/tumashu/chinese-pyim      xiaowl 同学 https://github.com/xiaowl  根据你 2014 年制作的
-    "词典360万（个人整理）.txt" 为 chinese-pyim 制作了一个比较好的输入法词库， 由于目前 chinese-pyim 没有内置词库，所以，我很想将这个词库作为默认 chinese-pyim 的默认词库来发布， 所以我需要从你这里了解一下 “"词典360万（个人整理）.txt"” 的一些信息：
+        我是 emacs拼音输入法： pyim 的维护者 ，https://github.com/tumashu/pyim      xiaowl 同学 https://github.com/xiaowl  根据你 2014 年制作的
+    "词典360万（个人整理）.txt" 为 pyim 制作了一个比较好的输入法词库， 由于目前 pyim 没有内置词库，所以，我很想将这个词库作为默认 pyim 的默认词库来发布， 所以我需要从你这里了解一下 “"词典360万（个人整理）.txt"” 的一些信息：
     1.  "词典360万（个人整理）.txt"  的说明文档中没有说明这个文件使用什么协议发布的， 可不可以明确一下？
     2.  你提到这个文件是 “综合多个词典整合”，你可以告诉我这些词典的具体信息吗，是 开源的词典还是 闭源的？
 
     -------------------------------------------------------------------------------------------------------------------------------------------------------------------
     作者：刘邵博         版本：v1
-    此词典为个人综合多本词典整合的一个大词典，词典共有词汇3669216个词汇。
-    词典结构为：词语\t词性\t词频。
-    词频是用ansj分词对270G新闻语料进行分词统计词频获得。
-    本人感觉需要特别说明的是词典整理过程中存在部分词汇无法确定是什么词性，对词性进行特别标注：nw和comb
+    此词典为个人综合多本词典整合的一个大词典，词典共有词汇3669216个词汇。词典结构为：词语\t词性\t词频。词频是用ansj分词对270G新闻语料进行分词统计词频获得。本人感觉需要特别说明的是词典整理过程中存在部分词汇无法确定是什么词性，对词性进行特别标注：nw和comb
         1、词性nw表示本身不知道是什么词性。
         2、词性comb表示通过ansj的nlp分词之后又被拆成了两个词。
 
     官网：http://www.nlpcn.org
     --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Converted from pyim-greatdict.el by [el2org](https://github.com/tumashu/el2org) .

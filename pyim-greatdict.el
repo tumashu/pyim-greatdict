@@ -1,37 +1,37 @@
-;;; chinese-pyim-greatdict.el --- A chinese-pyim dict, which include three million words.
+;;; pyim-greatdict.el --- A pyim dict, which include three million words.
 
 ;; * Header
 ;; TODO Copyright
 
 ;; Author: Wenliang Xiao <kevin.xiaowl@gmail.com>
 ;; Maintainer: Feng Shu <tumashu@163.com>
-;; URL: https://github.com/tumashu/chinese-pyim-greatdict
+;; URL: https://github.com/tumashu/pyim-greatdict
 ;; Version: 0.0.1
 ;; Keywords: convenience, Chinese, pinyin, input-method, complete
 
 ;;; Commentary:
-;; * chinese-pyim-greatdict README                                        :README:doc:
+;; * pyim-greatdict README                                        :README:doc:
 
 ;; ** 简介
-;; Chinese-pyim-greatdict 是一个 chinese-pyim 词库， 由 [[https://github.com/xiaowl][WenLiang Xiao ]] 同学根据他
+;; pyim-greatdict 是一个 pyim 词库， 由 [[https://github.com/xiaowl][WenLiang Xiao ]] 同学根据他
 ;; 之前自己使用的一个 NLP 语料库整理而成，这个词库词条比较多，包涵大概330万左右的词条，
 ;; 文件大小大约 80M, 希望可以免去大多数人到处找字典的苦恼。
 
-;; WenLiang Xiao 同学 [[https://github.com/tumashu/chinese-pyim/pull/77][最初]] 将这个词库通过百度网盘发布，
-;; 我个人认为这个词库文件对 Chinese-pyim 很重要，所以为其开启一个项目，并将这个词库命名为：greatdict.
+;; WenLiang Xiao 同学 [[https://github.com/tumashu/pyim/pull/77][最初]] 将这个词库通过百度网盘发布，
+;; 我个人认为这个词库文件对 pyim 很重要，所以为其开启一个项目，并将这个词库命名为：greatdict.
 
 ;; ** 安装和使用
 
 ;; 1. 配置melpa源，参考：http://melpa.org/#/getting-started
-;; 2. M-x package-install RET chinese-pyim-greatdict RET
+;; 2. M-x package-install RET pyim-greatdict RET
 ;; 3. 在emacs配置文件中（比如: ~/.emacs）添加如下代码：
 ;;    #+BEGIN_EXAMPLE
-;;    (require 'chinese-pyim-greatdict)
-;;    (chinese-pyim-greatdict-enable)
+;;    (require 'pyim-greatdict)
+;;    (pyim-greatdict-enable)
 ;;    #+END_EXAMPLE
 
 ;; ** NLP 语料库
-;; Chinese-pyim-greatdict 使用 NLP 语料库由 [[https://github.com/lshb][刘邵博]] 同学开发，2014 年发布在 “中国自然语言开源组织”
+;; pyim-greatdict 使用 NLP 语料库由 [[https://github.com/lshb][刘邵博]] 同学开发，2014 年发布在 “中国自然语言开源组织”
 ;; 的网站，具体网址为：http://www.nlpcn.org/resource/25
 
 
@@ -74,8 +74,8 @@
 
 ;; 你好，刘同学
 
-;;     我是 emacs拼音输入法： chinese-pyim 的维护者 ，https://github.com/tumashu/chinese-pyim      xiaowl 同学 https://github.com/xiaowl  根据你 2014 年制作的
-;; "词典360万（个人整理）.txt" 为 chinese-pyim 制作了一个比较好的输入法词库， 由于目前 chinese-pyim 没有内置词库，所以，我很想将这个词库作为默认 chinese-pyim 的默认词库来发布， 所以我需要从你这里了解一下 “"词典360万（个人整理）.txt"” 的一些信息：
+;;     我是 emacs拼音输入法： pyim 的维护者 ，https://github.com/tumashu/pyim      xiaowl 同学 https://github.com/xiaowl  根据你 2014 年制作的
+;; "词典360万（个人整理）.txt" 为 pyim 制作了一个比较好的输入法词库， 由于目前 pyim 没有内置词库，所以，我很想将这个词库作为默认 pyim 的默认词库来发布， 所以我需要从你这里了解一下 “"词典360万（个人整理）.txt"” 的一些信息：
 ;; 1.  "词典360万（个人整理）.txt"  的说明文档中没有说明这个文件使用什么协议发布的， 可不可以明确一下？
 ;; 2.  你提到这个文件是 “综合多个词典整合”，你可以告诉我这些词典的具体信息吗，是 开源的词典还是 闭源的？
 
@@ -94,35 +94,30 @@
 
 ;;; Code:
 ;; * 代码                                                               :code:
-;; #+BEGIN_SRC emacs-lisp
 
 ;;;###autoload
-(defun chinese-pyim-greatdict-enable ()
-  "Add greatdict to chinese-pyim."
+(defun pyim-greatdict-enable ()
+  "Add greatdict to pyim."
   (interactive)
   (let* ((file (concat (file-name-directory
-                        (locate-library "chinese-pyim-greatdict.el"))
+                        (locate-library "pyim-greatdict.el"))
                        "pyim-greatdict.pyim.gz")))
     (when (file-exists-p file)
-      (if (featurep 'chinese-pyim)
+      (if (featurep 'pyim)
           (pyim-extra-dicts-add-dict
            `(:name "Greatdict-elpa"
                    :file ,file
                    :coding utf-8-unix
                    :dict-type pinyin-dict
                    :elpa t))
-        (message "Chinese-pyim 没有安装，chinese-pyim-greatdict 启用失败。")))))
-
-;; #+END_SRC
+        (message "pyim 没有安装，pyim-greatdict 启用失败。")))))
 
 ;; * Footer
 
-;; #+BEGIN_SRC emacs-lisp
-(provide 'chinese-pyim-greatdict)
+(provide 'pyim-greatdict)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; chinese-pyim-greatdict.el ends here
-;; #+END_SRC
+;;; pyim-greatdict.el ends here

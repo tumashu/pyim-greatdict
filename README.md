@@ -29,6 +29,12 @@ WenLiang Xiao 同学 [最初](https://github.com/tumashu/pyim/pull/77) 将这个
         (require 'pyim-greatdict)
         (pyim-greatdict-enable)
 
+4. 使用[quelpa](https://github.com/quelpa/quelpa)来配置，（原因参考[issue](https://github.com/tumashu/pyim-greatdict/issues/4))，在配置文件中添加代码：
+
+        ;; .emacs
+        (quelpa '(pyim-greatdict :fetcher github :repo "tumashu/pyim-greatdict"))
+        ;; .spacemacs
+        (pyim-greatdict :location (recipe :fetcher github :repo "tumashu/pyim-greatdict"))
 
 <a id="orgf6603cc"></a>
 
